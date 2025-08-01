@@ -21,7 +21,7 @@ This project hosts a deep learning model for arbitrary neural style transfer, al
 
 ## 📂 Project Structure
 
-'''
+'''bash
 style-transfer-app/
 ├── app/
 │   ├── static/
