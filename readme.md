@@ -2,7 +2,7 @@
 
 This project hosts a deep learning model for arbitrary neural style transfer, allowing you to combine the content of one image with the style of another. The application is built with a high-performance **FastAPI** backend that serves both the model and a clean, modern user interface.
 
-![Demo Screenshot](static\image.png)
+![Demo Screenshot](static/image.png)
 
 ## ✨ Features
 
