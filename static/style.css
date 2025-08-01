@@ -17,17 +17,37 @@ body {
     margin: 0;
     padding: 2rem;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.main-header p {
+    font-size: 1.125rem;
+    color: var(--text-dark);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .main-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    width: 100%;
-    max-width: 1400px;
 }
 
 .column {
@@ -94,10 +114,6 @@ body {
 .placeholder svg { width: 3rem; height: 3rem; margin: 0 auto 0.5rem; }
 input[type="file"] { display: none; }
 
-.slider-container { text-align: center; }
-.slider-container label { display: block; margin-bottom: 0.5rem; }
-input[type="range"] { width: 100%; cursor: pointer; }
-
 .generate-button {
     background-color: var(--primary-color);
     color: white;
@@ -155,8 +171,9 @@ input[type="range"] { width: 100%; cursor: pointer; }
 .error-toast.show { transform: translate(-50%, 0); }
 
 @keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 1024px) {
-    body { padding: 1rem; align-items: flex-start; }
+    body { padding: 1rem; }
     .main-container { grid-template-columns: 1fr; }
 }
