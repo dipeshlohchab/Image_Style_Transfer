@@ -1,0 +1,30 @@
+# Python virtual environment
+/myenv
+/venv
+/env
+/.venv
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE and editor configuration
+.vscode/
+.idea/
+*.swp
+
+# Environment variables
+.env
+.env.*
+
+# TensorFlow/Keras generated files (if any)
+.ipynb_checkpoints
+
+# Logs
+*.log

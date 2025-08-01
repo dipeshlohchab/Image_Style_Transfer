@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Style Transfer</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Column 1: Content -->
+        <div class="column glass-card">
+            <header>
+                <h2>1. Content Image</h2>
+                <p>The main subject of your artwork.</p>
+            </header>
+            <label for="contentFile" class="preview-box" id="contentPreviewBox">
+                <div class="placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5z" /></svg>
+                    <span>Click or drag to upload</span>
+                </div>
+            </label>
+            <input type="file" id="contentFile" accept="image/*" required>
+        </div>
+
+        <!-- Column 2: Style -->
+        <div class="column glass-card">
+            <header>
+                <h2>2. Style Image</h2>
+                <p>The artistic style you want to apply.</p>
+            </header>
+            <label for="styleFile" class="preview-box" id="stylePreviewBox">
+                <div class="placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.43 2.43a2.25 2.25 0 01-2.43-2.43c0-1.034.84-1.875 1.875-1.875h.383m15.354-4.219a3 3 0 00-5.78-1.128 2.25 2.25 0 01-2.43-2.43a2.25 2.25 0 012.43-2.43c1.034 0 1.875.84 1.875 1.875h.383m-15.354 4.219v-2.475A3.375 3.375 0 016.75 8.25h9a3.375 3.375 0 013.375 3.375v2.475m-15.354 4.219H3.375A3.375 3.375 0 010 16.125v-2.475c0-1.86 1.515-3.375 3.375-3.375h9.375c1.86 0 3.375 1.515 3.375 3.375v2.475A3.375 3.375 0 0118.375 20.25h-3.375m-15.354-4.219A3.375 3.375 0 016.75 11.25h9a3.375 3.375 0 013.375 3.375v2.475" /></svg>
+                    <span>Click or drag to upload</span>
+                </div>
+            </label>
+            <input type="file" id="styleFile" accept="image/*" required>
+        </div>
+
+        <!-- Column 3: Result -->
+        <div class="column glass-card result-column">
+            <header>
+                <h2>3. Your Artwork</h2>
+                <p>The magic happens here.</p>
+            </header>
+            <div class="preview-box result-box" id="resultBox">
+                <div class="placeholder" id="resultPlaceholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.471-2.471a2.652 2.652 0 00-3.75-3.75L4.5 12" /></svg>
+                    <span>Result will appear here</span>
+                </div>
+                <div class="spinner-overlay" id="loadingSpinner">
+                    <div class="spinner"></div>
+                </div>
+                <img id="resultImage" alt="Stylized Result">
+            </div>
+            <button id="submitButton" class="generate-button">Generate Artwork</button>
+        </div>
+    </div>
+    <div id="error-toast" class="error-toast"></div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
