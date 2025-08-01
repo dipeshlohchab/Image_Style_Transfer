@@ -21,7 +21,7 @@ This project hosts a deep learning model for arbitrary neural style transfer, al
 
 ## 📂 Project Structure
 
-
+'''
 style-transfer-app/
 ├── app/
 │   ├── static/
@@ -35,7 +35,7 @@ style-transfer-app/
 ├── requirements.txt
 └── README.md
 
-
+'''
 
 ## 🚀 Getting Started
 
