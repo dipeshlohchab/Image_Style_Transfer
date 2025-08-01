@@ -113,15 +113,3 @@ uvicorn main:app --reload
 Your Neural Style Transfer app is now live!
 
 ---
-
-## 📝 Tips
-
-* **Deployment:** Easily deploy this app to Render, Railway, or any cloud VM that supports FastAPI.
-* **Model Improvements:** Swap in different pretrained style transfer models to experiment with various art styles.
-* **Customization:** Extend the frontend with file previews, progress bars, or a gallery of styles.
-
----
-
-## 📜 License
-
-Feel free to adapt and use this project for educational or personal purposes. Attribution is appreciated!
