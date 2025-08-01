@@ -25,15 +25,16 @@ This project hosts a deep learning model for arbitrary neural style transfer, al
 style-transfer-app/
 ├── app/
 │   ├── static/
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── script.js
+│   │   ├── index.html      
+│   │   ├── style.css       
+|   │   └── script.js         
 │   ├── model/
-│   │   └── stylized_decoder.h5   # <-- Place your trained model here
+│   │   └── stylized_decoder.h5 
 │   └── main.py
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+
 
 
 ## 🚀 Getting Started
